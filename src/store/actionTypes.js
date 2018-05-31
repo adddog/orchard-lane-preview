@@ -1,0 +1,2 @@
+export const ADD_ADDRESS_AT = 'ADD_ADDRESS_AT';
+export const START_RASPBERRY_AT = 'START_RASPBERRY_AT';

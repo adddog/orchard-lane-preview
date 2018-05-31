@@ -1,0 +1,52 @@
+{
+  "ignore": [
+    "node_modules",
+  ],
+  "env":
+  {
+    "development":
+    {
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
+        ["inferno", {"imports": true}],
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+
+      ],
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets":
+            {
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+            }
+          }
+        ],
+      ]
+    },
+    "production":
+    {
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
+        ["inferno", {"imports": true}],
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+
+      ],
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets":
+            {
+              "node": "0.8"
+            },
+            // We can allow 'const' and 'let' through for Premiere CC 2015.
+            // "exclude": ["check-es2015-constants", "transform-es2015-block-scoping"],
+          }
+        ],
+      ]
+    },
+  }
+}
